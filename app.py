@@ -9,6 +9,10 @@ CORS(app)
 
 from turnos import obternerTurno
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World'
+
 @app.route('/rest/v1.0/ping')
 def ping():
     return jsonify({"message":"pong!"})
